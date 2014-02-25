@@ -37,7 +37,10 @@ app.post('/login', function (req, res) {
 });
 
 app.get('/api/messages', function (req, res) {
-  res.json({ msgs: 123 });
+  res.json([
+    { subject: 'hi dear! blabla',  sender: 'mom'},
+    { subject: 'hi, ignore your mom\'s mails',  sender: 'dad'}
+  ]);
 });
 
 http.createServer(app).listen(env.PORT, function (err) {

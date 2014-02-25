@@ -1,24 +1,30 @@
 <html>
 <head>
     <title>JWT's example 01</title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
 </head>
 <body>
+    <div class="content">
 
-    <form id="login">
-        <input type="text" name="username" placeholder="username" value="" />
-        <input type="password" name="password" placeholder="password" value="" />
-        <input type="submit" />
-    </form>
+        <form id="login">
+            <p>Enter your credentials:</p>
+            <input type="text" name="username" placeholder="username" value="" />
+            <input type="password" name="password" placeholder="password" value="" />
+            <input type="submit" />
+        </form>
 
-    <div id="bio" style="display: none;">
-        Hello <span class="bio-name"></span>!
-        <br />
-        <button id="call-api">Call API</button>
+        <div id="bio" style="display: none;">
+            Hello <span class="bio-name"></span>!
+            <br />
+            <br />
+            <button id="call-api">Call the API</button>
+            <ul id="messages"></ul>
+        </div>
+
     </div>
 
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/jwt-decode.min.js"></script>
-    <script type="text/javascript">
-    </script>
+    <script src="/main.js"></script>
 </body>
 </html>

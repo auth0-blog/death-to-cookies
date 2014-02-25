@@ -1,0 +1,36 @@
+.content {
+    position:absolute;
+    top: 40%;
+    height: 220px;
+    margin-top: -110px;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+}
+input {
+    font-size: 25px;
+    display: block;
+    margin-top: 10px;
+}
+input[type=submit], button {
+    background-color: #94c231;
+    color: white;
+    border-color: #4cae4c;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -ms-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border: 0;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 35px;
+}
+
+form p {
+    font-size: 25px;
+}
