@@ -1,27 +1,37 @@
 <html>
 <head>
-    <title>JWT's example 03</title>
+    <title>JWT's example 02</title>
     <link rel="stylesheet" type="text/css" href="/main.css">
-    <link rel="stylesheet" type="text/css" href="/zocial/css/zocial.css">
 </head>
 <body>
     <div class="content">
 
-        <div id="login" style="display: none;">
-            <a class="zocial google auth-link" href="#">Authenticate with google</a>
-        </div>
+        <form id="login" style="display: none;">
+            <p>Enter your credentials:</p>
+            <input type="text" name="username" placeholder="username" value="" />
+            <input type="password" name="password" placeholder="password" value="" />
+            <input type="submit" />
+        </form>
 
-        <div id="user-area" style="display: none;">
-            Hello <span class="bio-name"></span>!
-            <br />
-            <br />
+        <div id="bio" style="display: none;">
+            <div class="item">Hello <span class="bio-name"></span>!</div>
+            <div class="item"><pre class="jwt"></pre></div>
+            <div class="item">
+                <ul class="messages">
+                </ul>
+            </div>
             <button id="call-api">Call the API</button>
-            <button id="logout" style="background-color: red;">Logout</button>
-            <ul id="messages"></ul>
+            <div class="item result" style="display: none">
+                Email sent to: <span id="to"></span>
+            </div>
         </div>
 
     </div>
 
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/store.js/1.3.14/store.min.js"></script>
+    <script src="/jwt-decode.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="/main.js"></script>
 </body>
 </html>

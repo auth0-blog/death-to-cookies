@@ -6,7 +6,7 @@
 <body>
     <div class="content">
 
-        <form id="login">
+        <form method="POST" id="login">
             <p>Enter your credentials:</p>
             <input type="text" name="username" placeholder="username" value="" />
             <input type="password" name="password" placeholder="password" value="" />
@@ -14,11 +14,12 @@
         </form>
 
         <div id="bio" style="display: none;">
-            Hello <span class="bio-name"></span>!
-            <br />
-            <br />
+            <div class="item">Hello <span class="bio-name"></span>!</div>
+            <div class="item"><pre class="jwt"></pre></div>
             <button id="call-api">Call the API</button>
-            <ul id="messages"></ul>
+            <div class="item result" style="display: none">
+                Email sent to: <span id="to"></span>
+            </div>
         </div>
 
     </div>

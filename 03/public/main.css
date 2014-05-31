@@ -1,11 +1,15 @@
+body {
+    zoom: 1.1;
+}
 .content {
-    position:absolute;
-    top: 40%;
-    height: 220px;
-    margin-top: -110px;
-    left: 50%;
-    width: 300px;
-    margin-left: -150px;
+    margin: 5% auto;
+    background: #fff;
+    width: 420px;
+    text-align: center;
+    padding: 40px 10px;
+    border-radius: 3px;
+    font-size: 30px;
+    font-family: Helvetica;
 }
 input {
     font-size: 25px;
@@ -13,24 +17,37 @@ input {
     margin-top: 10px;
 }
 input[type=submit], button {
-    background-color: #94c231;
-    color: white;
-    border-color: #4cae4c;
-    -webkit-transition: background-color 0.2s ease;
-    -moz-transition: background-color 0.2s ease;
-    -ms-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
-    transition: background-color 0.2s ease;
+    border-radius: 3px;
     text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 2px;
+    padding: 14px 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background-color: #eb5422;
     border: 0;
     font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    height: 35px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#to {
+    font-weight: bold;
+}
+
+.bio-name {
+    font-weight: 800;
 }
 
 form p {
     font-size: 25px;
+}
+
+.messages {
+    list-style-type: none;
+    text-align: left;
+    font-size: 14px;
 }

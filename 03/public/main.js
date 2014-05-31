@@ -21,8 +21,8 @@ function load_token(token) {
   //set the token for api calls
   set_api_token(token);
   store_token(token);
-
   show_profile(profile);
+  connect_socket(token);
 }
 
 function show_profile(profile) {
@@ -57,18 +57,23 @@ function set_api_token(token) {
 }
 
 function send_email() {
-  set_api_token(store.get('id_token'));
   $.ajax({
     url: '/api/send_email',
     cache: false
   }).done(function (data) {
-    $('.error').hide();
     $('.result').show();
     $('#to').html(data.to);
-  }).fail(function(resp) {
-    $('.error').show();
-    $('.result').hide();
-    $('.error').html(resp.responseText);
+  });
+}
+
+function connect_socket (token) {
+  var socket = io.connect('/', {'query': 'token=' + token});
+
+  socket.on('super-message', function(message){
+    console.log(message);
+    $('<li>')
+      .text('New message from: ' + message.name)
+      .appendTo($('.messages'));
   });
 }
 

@@ -1,0 +1,48 @@
+reset
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiSm9obiIsImxhc3RfbmFtZSI6IkRvZSIsImVtYWlsIjoiam9obkBkb2UuY29tIiwiaWQiOjEyMywiZXhwIjoxNDAwNjQzNjc5LCJpYXQiOjE0MDA2MjU2Nzl9.PkqydHWgjfr_o1pHhlM4JYOFNHgwQHQ5giKNqkjNEww
+set secret correct in jwt this-is-secret
+login to AWS
+remove files from s3
+
+simple application
+user/password
+content of the token - jwt
+how it is generated
+how do we protect the api (ajax)
+cookies. but where do we store it?
+refresh, y tengo q logearme
+
+02
+login
+call api
+resource tab with token
+eugenio: how does it get there?
+show store.js
+eugenio: so it means I can change the content?
+change to eugenio@, (poll: it works?) replace it, call api
+it works
+it works because we are sharing the secret 
+change secret to wrong, fails
+eugenio: decoupling
+
+03
+eugenio: lets add socketio
+muestro funcionando
+eugenio: lets take a look at the code
+muestro server socketio-jwt
+muestro client como manda el token
+saco el token, y falla el handshake
+eugenio: all node, what happens if I'm not on node
+muestro jwtio libraries
+
+04
+eugenio: file sharing example
+login
+user.get().profile.user_id
+muestro s3 console, no files
+upload, file, how does it work
+network trace
+deslogeo, me vuelvo a logear, delegation call
+the user identity flow, bucket can't use it
+
+

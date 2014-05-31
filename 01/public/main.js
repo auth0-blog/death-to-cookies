@@ -10,6 +10,7 @@ function login (form) {
 
     //decode the profile to show the name
     var profile = jwt_decode(result.token);
+    $('.jwt').html(result.token);
     $('.bio-name').html(profile.first_name);
   });
 }
@@ -28,10 +29,13 @@ function set_api_token(token) {
   });
 }
 
-function get_messages() {
-  return $.ajax({
-    url: '/api/messages',
+function send_email() {
+  $.ajax({
+    url: '/api/send_email',
     cache: false
+  }).done(function (data) {
+    $('.result').show();
+    $('#to').html(data.to);
   });
 }
 
@@ -47,13 +51,5 @@ $('#login').submit(function (e) {
 
 $('#call-api').click(function (e) {
   e.preventDefault();
-  get_messages()
-    .done(function (messages) {
-      var target = $('#messages');
-      messages.forEach(function (msg) {
-        $('<li>')
-          .text(msg.subject + ' by ' + msg.sender)
-          .appendTo(target);
-      });
-    });
+  send_email();
 });

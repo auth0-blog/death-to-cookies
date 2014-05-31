@@ -18,7 +18,7 @@ app.configure(function () {
 app.post('/login', function (req, res) {
   //TODO validate req.body.username and req.body.password
   //if is invalid, return 401
-  if (!(req.body.username === 'john.doe' && req.body.password === 'foobar')) {
+  if (!(req.body.password === '123')) {
     res.send(401, 'Wrong user or password');
     return;
   }
@@ -36,11 +36,8 @@ app.post('/login', function (req, res) {
   res.json({ token: token });
 });
 
-app.get('/api/messages', function (req, res) {
-  res.json([
-    { subject: 'hi dear! blabla',  sender: 'mom'},
-    { subject: 'hi, ignore your mom\'s mails',  sender: 'dad'}
-  ]);
+app.get('/api/send_email', function (req, res) {
+  res.json({ to: req.user.email });
 });
 
 http.createServer(app).listen(env.PORT, function (err) {
