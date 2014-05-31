@@ -11,3 +11,5 @@ Run `npm i` and then `node server.js` on every dir.
 ## License
 
 MIT 2014 - AUTH0 INC
+
+[auth0.com](https://auth0.com)
