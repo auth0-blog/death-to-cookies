@@ -1,4 +1,4 @@
-These are the examples of our talk at Gluecon 2014 "Death to cookies".
+# "Death to cookies" examples.
 
 The presentation slide is [here](https://speakerdeck.com/woloski/death-to-cookies-long-live-json-web-tokens).
 
